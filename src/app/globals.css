@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(1200px 800px at 50% -10%, #1b1512 0%, #0a0808 55%, #060404 100%);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #8f6bd8;
+  color: #0a0808;
+}
+
+@keyframes arcane-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: arcane-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes arcane-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-arcane-glow {
+  animation: arcane-glow 5s ease-in-out infinite;
+}
